@@ -11,12 +11,20 @@ const NavigationScreen = ({navigation}) => {
     navigation.navigate('TravelCardList');
   }, [navigation]);
 
+  const navigateToCarsList = useCallback(() => {
+    navigation.navigate('CarsListScreen');
+  }, [navigation]);
+
+  const navigateToFoodListScreen = useCallback(() => {
+    navigation.navigate('FoodListScreen');
+  }, [navigation]);
+
+  const navigateToMoviesListScreen = useCallback(() => {
+    navigation.navigate('MoviesListScreen');
+  }, [navigation]);
+
   // const navigateToEventCard = useCallback(() => {
   //   navigation.navigate('EventCards');
-  // }, [navigation]);
-
-  // const navigateToCarouselMovie = useCallback(() => {
-  //   navigation.navigate('CarouselMovie');
   // }, [navigation]);
 
   // const navigateToListSampleShareElement = useCallback(() => {
@@ -27,16 +35,8 @@ const NavigationScreen = ({navigation}) => {
   //   navigation.navigate('SalonShareElement');
   // }, [navigation]);
 
-  // const navigateToFoodShareElement = useCallback(() => {
-  //   navigation.navigate('FoodShareElement');
-  // }, [navigation]);
-
   // const navigateToPhotographyShareElement = useCallback(() => {
   //   navigation.navigate('PhotographyList');
-  // }, [navigation]);
-
-  // const navigateToCarsList = useCallback(() => {
-  //   navigation.navigate('CarsList');
   // }, [navigation]);
 
   // const navigateToTravelUpList = useCallback(() => {
@@ -79,6 +79,22 @@ const NavigationScreen = ({navigation}) => {
           <Text style={styles.title}>Travel Card List Share ELement</Text>
         </Pressable>
 
+        <Pressable style={styles.btnNavigation} onPress={navigateToCarsList}>
+          <Text style={styles.title}>Cars List Share Element</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToFoodListScreen}>
+          <Text style={styles.title}>Food List Share Element</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToMoviesListScreen}>
+          <Text style={styles.title}>Movies List Share Element</Text>
+        </Pressable>
+
         {/*
         <Pressable style={styles.btnNavigation} onPress={navigateToEventCard}>
           <Text style={styles.title}>Event Cards Share Element</Text>
@@ -90,11 +106,7 @@ const NavigationScreen = ({navigation}) => {
           <Text style={styles.title}>Travel Up List Share Element</Text>
         </Pressable>
 
-        <Pressable
-          style={styles.btnNavigation}
-          onPress={navigateToCarouselMovie}>
-          <Text style={styles.title}>Card Carousel Movie</Text>
-        </Pressable>
+
         <Pressable
           style={styles.btnNavigation}
           onPress={navigateToListSampleShareElement}>
@@ -105,19 +117,13 @@ const NavigationScreen = ({navigation}) => {
           onPress={navigateToSalonShareElement}>
           <Text style={styles.title}>Salon Menu Share Element</Text>
         </Pressable>
-        <Pressable
-          style={styles.btnNavigation}
-          onPress={navigateToFoodShareElement}>
-          <Text style={styles.title}>Food Menu ShareElement</Text>
-        </Pressable>
+
         <Pressable
           style={styles.btnNavigation}
           onPress={navigateToPhotographyShareElement}>
           <Text style={styles.title}>Photography Share Element</Text>
         </Pressable>
-        <Pressable style={styles.btnNavigation} onPress={navigateToCarsList}>
-          <Text style={styles.title}>Cars List Share Element</Text>
-        </Pressable>
+
 
 
         <Pressable

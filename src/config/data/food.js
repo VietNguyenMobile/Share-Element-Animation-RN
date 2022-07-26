@@ -1,4 +1,4 @@
-import faker from 'faker';
+import {faker} from '@faker-js/faker';
 import niceColors from 'nice-color-palettes';
 faker.seed(1);
 
@@ -120,20 +120,20 @@ export const tabs = [
 ];
 export default data.map((item, index) => ({
   ...item,
-  key: faker.random.uuid(),
+  key: faker.datatype.uuid(),
   subType: faker.commerce.productName(),
   color: `${colors[index % colors.length]}66`,
   fullColor: colors[index % colors.length],
   description: [...Array(2).keys()]
     .map(faker.commerce.productDescription)
     .join('. '),
-  price: `$${(faker.random.number(200) + 50) / 100}`,
+  price: `$${(faker.datatype.number(200) + 50) / 100}`,
   subcategories: faker.helpers.shuffle(data).slice(0, 3),
 }));
 
-export const popularFood = faker.helpers.shuffle(data).map((item) => ({
+export const popularFood = faker.helpers.shuffle(data).map(item => ({
   ...item,
-  key: faker.random.uuid(),
-  rating: (faker.random.number(30) + 20) / 10,
-  price: `$${(faker.random.number(200) + 50) / 100}`,
+  key: faker.datatype.uuid(),
+  rating: (faker.datatype.number(30) + 20) / 10,
+  price: `$${(faker.datatype.number(200) + 50) / 100}`,
 }));

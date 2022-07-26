@@ -1,6 +1,5 @@
 // https://www.flaticon.com/packs/kawaii-avatars-3
-
-import faker from 'faker';
+import {faker} from '@faker-js/faker';
 import niceColors from 'nice-color-palettes';
 faker.seed(1);
 
@@ -165,13 +164,13 @@ const data = [
 
 export default data.map((item, index) => ({
   ...item,
-  key: faker.random.uuid(),
+  key: faker.datatype.uuid(),
   color: colors[index % colors.length],
   name: faker.name.findName(),
   jobTitle: faker.name.jobTitle(),
   categories: [...Array(3).keys()].map(() => {
     return {
-      key: faker.random.uuid(),
+      key: faker.datatype.uuid(),
       title: faker.name.jobType(),
       subcats: [...Array(3).keys()].map(faker.name.jobType),
     };

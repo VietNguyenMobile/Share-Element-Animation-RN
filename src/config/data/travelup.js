@@ -1,6 +1,5 @@
 // https://unsplash.com/collections/3679291/montain
-
-import faker from 'faker';
+import {faker} from '@faker-js/faker';
 
 const mountains = [
   'Everest',
@@ -50,11 +49,11 @@ const images = [
   'https://images.unsplash.com/photo-1498910265115-9fb541931cd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=600&q=80',
   'https://images.unsplash.com/34/BA1yLjNnQCI1yisIZGEi_2013-07-16_1922_IMG_9873.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=600&q=80',
 ];
-const getRandom = (arr) => {
+const getRandom = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-const data = [...Array(images.length).keys()].map((i) => {
+const data = [...Array(images.length).keys()].map(i => {
   return {
     key: String(i),
     // image: `https://source.unsplash.com/collection/3679291/320x${640 + i}`,

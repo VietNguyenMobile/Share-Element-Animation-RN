@@ -1,4 +1,4 @@
-import faker from 'faker';
+import {faker} from '@faker-js/faker';
 
 const f = faker.seed(1);
 
@@ -14,11 +14,11 @@ export const photographyImages = [
   'https://images.unsplash.com/photo-1548614606-52b4451f994b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=800&q=80',
   'https://images.unsplash.com/photo-1548600916-dc8492f8e845?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=800&q=80',
 ];
-const getRandom = (arr) => {
+const getRandom = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-export default [...Array(10).keys()].map((i) => {
+export default [...Array(10).keys()].map(i => {
   return {
     key: String(i),
     title: faker.name.jobTitle(),
@@ -34,15 +34,15 @@ export default [...Array(10).keys()].map((i) => {
       details: [
         {
           label: 'Shots',
-          value: faker.random.number(400),
+          value: faker.datatype.number(400),
         },
         {
           label: 'Followers',
-          value: faker.random.number(5000),
+          value: faker.datatype.number(5000),
         },
         {
           label: 'Following',
-          value: faker.random.number(2000),
+          value: faker.datatype.number(2000),
         },
       ],
     },

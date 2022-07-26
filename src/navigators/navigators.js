@@ -17,6 +17,15 @@ import UrbanEarsDetails from '../screens/urban-ears-details';
 import TravelCardList from '../screens/travel-card-list';
 import TravelCardDetails from '../screens/travel-card-details';
 
+import CarsListScreen from '../screens/cars-list';
+import CarsDetails from '../screens/cars-details';
+
+import FoodListScreen from '../screens/food-list';
+import FoodDetails from '../screens/food-details';
+
+import MoviesListScreen from '../screens/movies-list';
+import MoviesDetails from '../screens/movies-details';
+
 const Stack = createSharedElementStackNavigator();
 
 const Navigation = () => {
@@ -35,6 +44,15 @@ const Navigation = () => {
         <Stack.Screen name="UrbanEarsDetails" component={UrbanEarsDetails} />
         <Stack.Screen name="TravelCardList" component={TravelCardList} />
         <Stack.Screen name="TravelCardDetails" component={TravelCardDetails} />
+
+        <Stack.Screen name="CarsListScreen" component={CarsListScreen} />
+        <Stack.Screen name="CarsDetails" component={CarsDetails} />
+
+        <Stack.Screen name="FoodListScreen" component={FoodListScreen} />
+        <Stack.Screen name="FoodDetails" component={FoodDetails} />
+
+        <Stack.Screen name="MoviesListScreen" component={MoviesListScreen} />
+        <Stack.Screen name="MoviesDetails" component={MoviesDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
